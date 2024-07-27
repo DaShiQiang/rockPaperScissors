@@ -9,4 +9,17 @@ function getComputerChoice() {
   }
 }
 console.log(getComputerChoice());
-console.log("Hello, World");
+
+function getHumanChoice() {
+  let answer = prompt("Choose wisely");
+  if (answer.toLowerCase() === "rock") {
+    return "rock";
+  } else if (answer.toLowerCase() === "paper") {
+    return "paper";
+  } else if (answer.toLowerCase() === "scissors") {
+    return "scissors";
+  } else {
+    console.log("Invalid input. Try again");
+    return getComputerChoice();
+  }
+}
